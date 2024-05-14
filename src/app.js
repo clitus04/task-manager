@@ -1,7 +1,15 @@
-const App = () => {
-    return (
-        <div className="demo-text">App is Running Successfully</div>
-    )
-}
+import { Provider } from "react-redux";
+import Dashboard from "./modules/dashboard";
+import { store } from "./redux/store";
 
-export default App
+const App = () => {
+  return (
+    <div>
+      <Provider store={store}>
+        <Dashboard />
+      </Provider>
+    </div>
+  );
+};
+
+export default App;
